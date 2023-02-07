@@ -1,1 +1,1 @@
-# Daily-Horiscope
+# Daily-Horoscope
