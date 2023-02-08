@@ -177,6 +177,7 @@ body {
         white, 
         rgba(255, 255, 255, 0)
       );
+      z-index: -1;
 }
 
 .stars2 {
@@ -212,6 +213,7 @@ body {
         white, 
         rgba(255, 255, 255, 0)
       );
+      z-index: -1;
 }
 
 .stars3 {
@@ -247,6 +249,7 @@ body {
         white, 
         rgba(255, 255, 255, 0)
       );
+      z-index: -1;
 }
 
 
@@ -301,4 +304,25 @@ section p {
   border-bottom: 5px;
   border-color: black;
   color: wheat;
+}
+
+.days .btn {
+  background-color: rgba(38, 11, 63, 0.685);
+  color: beige;
+  border: #110617 5px;
+  border-radius: 10px;
+  z-index: 100;
+
+}
+
+.days .btn:hover {
+  background-color: blueviolet;
+}
+
+.buttons:hover {
+  background-color: blueviolet;
+}
+
+nav {
+  background-color: rgba(43, 13, 71, 0.434);
 }
