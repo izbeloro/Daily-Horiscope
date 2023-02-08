@@ -1,0 +1,328 @@
+
+* {
+  color: wheat;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+body {
+  background: radial-gradient(circle at bottom, rgb(58, 58, 178) 0, rgb(13, 11, 41) 100%);
+  height: 100%;
+  overflow: hidden;
+}
+
+.space {
+  background: rgba(106, 3, 143, 0.1) center / 200px 200px round;
+  border: 1px dashed rgb(78, 2, 78);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.stars1 {
+  background-image:
+      radial-gradient(
+        1px 1px at 25px 5px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 50px 25px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 125px 20px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 50px 75px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 15px 125px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 110px 80px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+}
+
+.stars2 {
+  background-image:
+      radial-gradient(
+        1px 1px at 75px 125px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 100px 75px, 
+        rgb(236, 230, 112), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 199px 100px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 20px 50px, 
+        rgb(244, 245, 199), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 100px 5px, 
+        rgb(222, 238, 83), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 5px 5px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+}
+
+.stars3 {
+  background-image:
+      radial-gradient(
+        1px 1px at 10px 10px, 
+        rgb(244, 245, 199), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 150px 150px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 60px 170px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 175px 180px, 
+        rgb(218, 220, 81), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 195px 95px, 
+        rgb(244, 245, 199), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 95px 145px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+}
+
+@keyframes space {
+  40% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  60% {
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.stars1 {
+  animation: space 100s ease-in-out infinite;
+  background-image:
+      radial-gradient(
+        1px 1px at 25px 5px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 50px 25px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 125px 20px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 50px 75px, 
+        rgb(218, 216, 106), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 15px 125px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 110px 80px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+      z-index: -1;
+}
+
+.stars2 {
+  animation: space 200s ease-in-out infinite;
+  background-image:
+      radial-gradient(
+        1px 1px at 75px 125px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 100px 75px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 199px 100px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 20px 50px, 
+        rgb(217, 219, 103), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 100px 5px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 5px 5px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+      z-index: -1;
+}
+
+.stars3 {
+  animation: space 300s ease-in-out infinite;
+  background-image:
+      radial-gradient(
+        1px 1px at 10px 10px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1px 1px at 150px 150px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 60px 170px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        1.5px 1.5px at 175px 180px, 
+        rgb(232, 232, 113), 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2px 2px at 195px 95px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      ),
+      radial-gradient(
+        2.5px 2.5px at 95px 145px, 
+        white, 
+        rgba(255, 255, 255, 0)
+      );
+      z-index: -1;
+}
+
+
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(78, 23, 115, 0.509);
+  overflow-x: hidden;
+  padding-top: 16px;
+  justify-content: center;
+}
+
+/* Style sidebar links */
+.sidebar button {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #110617;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar button img:hover {
+  border-color: #eef079;
+}
+
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar button {font-size: 18px;}
+}
+
+.buttons img {
+  height: 70px;
+  width: 80px;
+  background: transparent none;
+
+}
+
+section p {
+  border-bottom: 5px;
+  border-color: black;
+  color: wheat;
+}
+
+.days .btn {
+  background-color: rgba(38, 11, 63, 0.685);
+  color: beige;
+  border: #110617 5px;
+  border-radius: 10px;
+  z-index: 100;
+
+}
+
+.days .btn:hover {
+  background-color: blueviolet;
+}
+
+.buttons:hover {
+  background-color: blueviolet;
+}
+
+nav {
+  background-color: rgba(43, 13, 71, 0.434);
+}
