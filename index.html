@@ -14,7 +14,7 @@
 
             <nav class="flex flex-wrap justify-between items-center">
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-                    <span class="self-center font-semibold whitespace-nowrap text-4xl">Your Daily Dose
+                    <span class="self-center ml-5 font-semibold whitespace-nowrap text-4xl">Your Daily Dose
                         of Horoscope</span>
                 </div>
             </nav>
@@ -43,22 +43,45 @@
 
             <section class="p-10 mb-52 text-2xl text-center mr-20" id="daily-horo">
                 <div class="days">
-                <button type="submit" class="btn px-5 self-center">Yesterday</button>
-                <button type="submit" class="btn px-5 self-center">Today</button>
-                <button type="submit" class="btn px-5 self-center">Tomorrow</button>
+                <button type="submit" id="yest" class="btn px-5 self-center">Yesterday</button>
+                <button type="submit" id="today" class="btn px-5 self-center">Today</button>
+                <button type="submit" id="tom" class="btn px-5 self-center">Tomorrow</button>
                 </div>
                 <h2>Daily Horoscope:</h2>
+                <div class="daily-zodiac">
+                    API Placeholder
+                </div>
             </section>
 
-            <section id="fun-fact" class="hide text-2xl">
+
+            <section id="fun-fact" class="hide">
                 <h2>Fun Fact!</h2>
-                <button id="fact-btn" class="text-2xl p-2 ">
+                <button id="fact" class="hide">
                     Reveal the fact!
                 </button>
+
+            <section id="fun-fact-containersect">
+                <button type="button" id="fun-fact" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 hide">Reveal the fact!</button>
+                
+                <div class="flex justify-left h-40 Hide-container-fact">
+                        <div class="flex flex-col md:flex-row md:max-w-md	rounded-lg bg-white shadow-lg">
+                        <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
+                        <div class="p-6 flex flex-col justify-start">
+                            <h5 class="text-gray-900 text-xl font-medium mb-2">Fun Fact!</h5>
+                            <p class="text-gray-700 text-base mb-4">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            </p>
+                        </div>
+                        </div>
+                </div>
             </section>
+
+
+            </section>
+
             <div class="absolute bottom-12 right-10 text-2xl mb-40">
-                <section id="moon-phase" class="hide">
-                    <h2>Tonight's Moon Phase</h2>
+                <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Tonight's Moon Phase</button>
+                <section id="moon-phase-text" class="hide">
 
                 </section>
             </div>
@@ -67,73 +90,73 @@
         <aside id="signs">
             <!-- In this section, individual classes were deleted and condensed into benefits h3 in the CSS -->
             <section class="sidebar">
-                <h3 class="text-lg pb-10 text-center">CHOOSE YOUR SIGN!</h3>
-                <button class="buttons" type="submit">
+                <h3 class="text-lg pb-10 text-center mr-3">CHOOSE YOUR SIGN!</h3>
+                <button class="buttons" id="aries" type="submit">
                     <img src="./assets/aries.png" alt="buttonpng" /> ARIES
                 </button>
                 <p class="underline">
                     MAR 21 - APR 19
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="taurus" type="submit">
                     <img src="./assets/taurus.png" alt="buttonpng" /> TAURUS
                 </button>
                 <p class="underline">
                     APR 20 - MAY 20
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="gemini" type="submit">
                     <img src="./assets/gemini.png" alt="buttonpng" /> GEMINI
                 </button>
                 <p class="underline">
                     MAY 21 - JUN 20
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="cancer" type="submit">
                     <img src="./assets/cancer.png" alt="buttonpng" /> CANCER
                 </button>
                 <p class="underline"> JUN 21 - JUL 22
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="leo" type="submit">
                     <img src="./assets/leo.png" alt="buttonpng" /> LEO
                 </button>
                 <p class="underline">
                     JUL 23 - AUG 22
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="virgo" type="submit">
                     <img src="./assets/virgo.png" alt="buttonpng" /> VIRGO
                 </button>
                 <p class="underline">
                     AUG 23 - SEP 22
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="libra" type="submit">
                     <img src="./assets/libra.png" alt="buttonpng" /> LIBRA
                 </button>
                 <p class="underline">
                     SEP 23 - OCT 22
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="scorpio" type="submit">
                     <img src="./assets/scorpio.png" alt="buttonpng" /> SCORPIO
                 </button>
                 <p class="underline">
                     OCT 23 - NOV 21
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="sagittarius" type="submit">
                     <img src="./assets/sagittarius.png" alt="buttonpng" /> SAGITTARIUS
                 </button>
                 <p class="underline">
                     NOV 22 - DEC 21
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="capricorn" type="submit">
                     <img src="./assets/capricorn.png" alt="buttonpng" /> CAPRICORN
                 </button>
                 <p class="underline">
                     DEC 22 - JAN 19
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="aquarius" type="submit">
                     <img src="./assets/aquarius.png" alt="buttonpng" /> AQUARIUS
                 </button>
                 <p class="underline">
                     JAN 20 - FEB 18
                 </p>
-                <button class="buttons" type="submit">
+                <button class="buttons" id="pisces" type="submit">
                     <img src="./assets/pisces.png" alt="buttonpng" /> PISCES
                 </button>
                 <p class="underline">
@@ -143,6 +166,9 @@
         <div class="space stars1"></div>
         <div class="space stars2"></div>
         <div class="space stars3"></div>
+
+     
+    <script src="./assets/script.js"></script>
 
 </body>
 

@@ -13,6 +13,10 @@ body {
   overflow: hidden;
 }
 
+.Hide-container-fact {
+  visibility: hidden;
+}
+
 .space {
   background: rgba(106, 3, 143, 0.1) center / 200px 200px round;
   border: 1px dashed rgb(78, 2, 78);
