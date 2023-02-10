@@ -1,3 +1,4 @@
+
 var yesterday = document.getElementById("yest");
 var today = document.getElementById("today");
 var tomorrow = document.getElementById("tom");
@@ -43,3 +44,29 @@ yesterday.addEventListener("click", showYest);
 today.addEventListener("click", showToday);
 tomorrow.addEventListener("click", showTom)
 funFact.addEventListener("click", showFact)
+
+
+
+var showFactButton = document.getElementById('fun-fact');
+//var FactContainer = document.querySelector('#Hide-container-fact');
+
+/*
+document.getElementById('fun-fact').addEventListener("click", function(){
+   document.getElementById('Hide-container-fact').style.visibility = 'visible';
+})
+*/
+
+function DisplayFunFact(event){
+    event.preventDefault();
+    var FactContainer = document.querySelector('Hide-container-fact');
+
+    FactContainer.style.display = 'visible';
+    
+  //else {
+   // FactContainer.style.visibility = 'hidden';
+  //}
+}
+
+
+showFactButton.addEventListener("click", DisplayFunFact);
+
