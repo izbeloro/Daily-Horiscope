@@ -1,4 +1,3 @@
-
 var yesterday = document.getElementById("yest");
 var today = document.getElementById("today");
 var tomorrow = document.getElementById("tom");
@@ -15,7 +14,8 @@ var sagittarius = document.getElementById("sagittarius");
 var capricorn = document.getElementById("capricorn");
 var aquarius = document.getElementById("aquarius");
 var pisces = document.getElementById("pisces");
-
+var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
+var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
 // functions for horoscope navigation
 function showYest() {
     
@@ -33,6 +33,10 @@ function DisplayFunFact(event){
     var FactContainer = document.querySelector('#fact-container');
     FactContainer.classList.remove('hide');
 }
+// function for fun fact
+//function showFact() {
+    //funFact.classList.add("hide");
+//}
 
 // function for moon phase
 function showMoon() {
@@ -97,6 +101,22 @@ function clickedPisces() {
     document.getElementById("fun-fact-text").innerText = "Pisces are the least materialistic sign in the zodiac.";   
 
 }
+function displayHoro()  {
+    const options = {
+        method: 'POST',
+        headers: {
+            'X-RapidAPI-Key': 'c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19',
+            'X-RapidAPI-Host': 'sameer-kumar-aztro-v1.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+}
+
+displayHoro();
 
 // event listeners
 yesterday.addEventListener("click", showYest);
