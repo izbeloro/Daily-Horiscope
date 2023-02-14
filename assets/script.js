@@ -14,22 +14,12 @@ var sagittarius = document.getElementById("sagittarius");
 var capricorn = document.getElementById("capricorn");
 var aquarius = document.getElementById("aquarius");
 var pisces = document.getElementById("pisces");
+var moonPhase = document.getElementById("moon-phase-text");
+var titleFact = document.getElementById("fact-title");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today";
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19";
 var moonBtn = document.getElementById("moon-phase");
 
-// functions for horoscope navigation
-function showYest() {}
-
-function showToday() {}
-
-function showTom() {}
-
-// function for fun fact
-
-var titleFact = document.getElementById("fact-title");
-var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
-var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
 
 // functions for horoscope navigation
 function showYest() {
@@ -39,6 +29,7 @@ function showYest() {
 function showToday() {
     displayHoro("today");
 }
+
 
 function showTom() {
     displayHoro("tomorrow");
@@ -70,7 +61,9 @@ const fetchNASAData = async () => {
     document.getElementById('title').textContent = data.title;
     document.getElementById('date').textContent = data.date;
     document.getElementById('moon-phase-text').textContent = data.explanation;
-    document.getElementById("picture") = data.url;
+   var img = document.getElementById("picture");
+   img.src = data.hdurl;
+    
     
   }
   
@@ -93,7 +86,6 @@ function clickedTaurus() {
 function clickedGemini() {
     document.getElementById("fun-fact-text").innerText = "Extroverted and fun-loving personalities are characteristics of Geminis. They enjoy being around others and are always up for a good time.";   
     titleFact.innerText = "Gemini";
-
     localStorage.setItem("Astrology Sign", "Gemini");
 
 
@@ -191,14 +183,11 @@ function renderHoroscope(data) {
 
 // displayHoro();
 
-
 // event listeners
 
 yesterday.addEventListener("click", showYest);
 today.addEventListener("click", showToday);
 tomorrow.addEventListener("click", showTom);
-var showFactButton = document.getElementById("fun-fact");
-showFactButton.addEventListener("click", DisplayFunFact);
 funFact.addEventListener("click", DisplayFunFact);
 aries.addEventListener("click", clickedAries);
 taurus.addEventListener("click", clickedTaurus);
@@ -213,6 +202,4 @@ capricorn.addEventListener("click", clickedCapricorn);
 aquarius.addEventListener("click", clickedAquarius);
 pisces.addEventListener("click", clickedPisces);
 moonBtn.addEventListener("click", fetchNASAData);
-
-
 
