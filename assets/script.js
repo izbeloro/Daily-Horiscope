@@ -14,6 +14,19 @@ var sagittarius = document.getElementById("sagittarius");
 var capricorn = document.getElementById("capricorn");
 var aquarius = document.getElementById("aquarius");
 var pisces = document.getElementById("pisces");
+var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today";
+var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19";
+var moonBtn = document.getElementById("moon-phase");
+
+// functions for horoscope navigation
+function showYest() {}
+
+function showToday() {}
+
+function showTom() {}
+
+// function for fun fact
+
 var titleFact = document.getElementById("fact-title");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
@@ -30,20 +43,38 @@ function showToday() {
 function showTom() {
     displayHoro("tomorrow");
 }
+
 function DisplayFunFact(event){
     event.preventDefault();
-    var FactContainer = document.querySelector('#fact-container');
-    FactContainer.classList.remove('hide');
+    var FactContainer = document.querySelector("#fact-container");
+    FactContainer.classList.remove("hide");
+
 }
-// function for fun fact
-//function showFact() {
-    //funFact.classList.add("hide");
-//}
 
 // function for moon phase
-function showMoon() {
+const url = 'https://api.nasa.gov/planetary/apod?api_key=';
+const api_key = '17IbzM8GxbtOwHnj13QFyZGYzqwfcprwC1pZjXBV';
 
-}
+const fetchNASAData = async () => {
+    try {
+      const response = await fetch(`${url}${api_key}`)
+      const data = await response.json()
+      displayData(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  function displayData (data) {
+    console.log(data);
+    document.getElementById('title').textContent = data.title;
+    document.getElementById('date').textContent = data.date;
+    document.getElementById('moon-phase-text').textContent = data.explanation;
+    document.getElementById("picture") = data.url;
+    
+  }
+  
+
 
 function clickedAries() {
     document.getElementById("fun-fact-text").innerText = "Aries are the most active zodiac sign. They're always working, investing in a hobby, exercising, or meeting new people.";   
@@ -56,12 +87,15 @@ function clickedTaurus() {
     document.getElementById("fun-fact-text").innerText = "Taurus people are very sensitive, devoted, affectionate, loyal, honest, and trustworthy when they fall in love.";   
     titleFact.innerText = "Taurus";
     localStorage.setItem("Astrology Sign", "Taurus");
+
 }
 
 function clickedGemini() {
     document.getElementById("fun-fact-text").innerText = "Extroverted and fun-loving personalities are characteristics of Geminis. They enjoy being around others and are always up for a good time.";   
     titleFact.innerText = "Gemini";
+
     localStorage.setItem("Astrology Sign", "Gemini");
+
 
 }
 
@@ -112,6 +146,7 @@ function clickedCapricorn() {
     titleFact.innerText = "Capricorn";
     localStorage.setItem("Astrology Sign", "Capricorn");
 
+
 }
 
 function clickedAquarius() {
@@ -119,12 +154,14 @@ function clickedAquarius() {
     titleFact.innerText = "Aquarius";
     localStorage.setItem("Astrology Sign", "Aquarius");
 
+
 }
 
 function clickedPisces() {
     document.getElementById("fun-fact-text").innerText = "Pisces are the least materialistic sign in the zodiac.";   
     titleFact.innerText = "Pisces";
     localStorage.setItem("Astrology Sign", "Pisces");
+
 
 }
 function displayHoro(day)  {
@@ -154,10 +191,14 @@ function renderHoroscope(data) {
 
 // displayHoro();
 
+
 // event listeners
-//yesterday.addEventListener("click", showYest);
-//today.addEventListener("click", showToday);
-//tomorrow.addEventListener("click", showTom);
+
+yesterday.addEventListener("click", showYest);
+today.addEventListener("click", showToday);
+tomorrow.addEventListener("click", showTom);
+var showFactButton = document.getElementById("fun-fact");
+showFactButton.addEventListener("click", DisplayFunFact);
 funFact.addEventListener("click", DisplayFunFact);
 aries.addEventListener("click", clickedAries);
 taurus.addEventListener("click", clickedTaurus);
@@ -166,9 +207,12 @@ cancer.addEventListener("click", clickedCancer);
 leo.addEventListener("click", clickedLeo);
 virgo.addEventListener("click", clickedVirgo);
 libra.addEventListener("click", clickedLibra);
-virgo.addEventListener("click", clickedVirgo);
 scorpio.addEventListener("click", clickedScorpio);
 sagittarius.addEventListener("click", clickedSagittarius);
 capricorn.addEventListener("click", clickedCapricorn);
 aquarius.addEventListener("click", clickedAquarius);
 pisces.addEventListener("click", clickedPisces);
+moonBtn.addEventListener("click", fetchNASAData);
+
+
+

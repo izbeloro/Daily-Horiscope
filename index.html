@@ -14,7 +14,7 @@
 
             <nav class="flex flex-wrap justify-between items-center">
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-                    <span class="self-center font-semibold whitespace-nowrap text-4xl">Your Daily Dose
+                    <span class="self-center ml-5 font-semibold whitespace-nowrap text-4xl">Your Daily Dose
                         of Horoscope</span>
                 </div>
             </nav>
@@ -41,13 +41,16 @@
         </header>
         <main class="main">
 
-            <section class="p-10 mb-52 text-2xl" id="daily-horo">
+            <section class="p-10 mb-52 text-2xl text-center mr-20" id="daily-horo">
                 <div class="days">
                 <button type="submit" id="yest" class="btn px-5 self-center">Yesterday</button>
                 <button type="submit" id="today" class="btn px-5 self-center">Today</button>
                 <button type="submit" id="tom" class="btn px-5 self-center">Tomorrow</button>
                 </div>
                 <h2>Daily Horoscope:</h2>
+
+                <div class="daily-zodiac">
+               
                 <div id="dh">
                     
                 </div>
@@ -69,14 +72,17 @@
                 </div>
             </section>
             
-            <div class="absolute bottom-12 right-10 text-2xl mb-40">
-                <button type="button" id="fun-fact" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Tonight's Moon Phase</button>
-                <section id="moon-phase" class="hide">
-
-                </section>
+            <div class="text-2xl mb-40 flex justify-right absolute bottom-0 right-0 h-20 w-30">
+                <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Astronomy Fact of the Day</button>
+                <div class="flex flex-col md:flex-row md:max-w-lg rounded-lg bg-white shadow-lg">
+                <title id="title"></title>
+                <div id="date"></div>
+                <img src="" id="picture" class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg">
+                <section id="moon-phase-text"></section>
+                </div>
             </div>
 
-        </main>
+      </main>
         <aside id="signs">
             <!-- In this section, individual classes were deleted and condensed into benefits h3 in the CSS -->
             <section class="sidebar">
@@ -158,6 +164,7 @@
         <div class="space stars2"></div>
         <div class="space stars3"></div>
     <script src="./assets/script.js"></script>
+
 
 </body>
 
