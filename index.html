@@ -48,20 +48,20 @@
                 <button type="submit" id="tom" class="btn px-5 self-center">Tomorrow</button>
                 </div>
                 <h2>Daily Horoscope:</h2>
-                <div class="daily-zodiac">
-                    API Placeholder
+                <div id="dh">
+                    
                 </div>
             </section>
 
             <section id="fun-fact">
-                <button type="button" id="fact" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Reveal the fact!</button>
+                <button type="button" id="fact" class=" text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Reveal the fact!</button>
                 
                 <div class="flex justify-left h-45 hide" id="fact-container">
-                        <div class="flex flex-col md:flex-row md:max-w-lg	rounded-lg bg-white shadow-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-lg	rounded-lg shadow-lg small-containers">
                         <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg?w=400&h=300&c=crop" alt="" />
                         <div class="p-6 flex flex-col justify-start"> 
-                        <h5 class="text-gray-900 text-xl font-medium mb-2">Fun Fact!</h5>
-                            <p class="text-gray-700 text-base mb-4" id = "fun-fact-text">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2 text-center" id="fact-title">Fun Fact!</h5>
+                            <p class="text-gray-700 text-base mb-4 text-center" id = "fun-fact-text">
                                 Click a sign on the left to view your fun fact!
                             </p>
                         </div>
@@ -69,13 +69,13 @@
                 </div>
             </section>
             
-            <div class="text-2xl mb-40 flex justify-right absolute bottom-0 right-0 h-20 w-30">
+            <div class="mb-40 justify-right p-9 relative">
                 <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Astronomy Fact of the Day</button>
-                <div class="flex flex-col md:flex-row md:max-w-lg rounded-lg bg-white shadow-lg">
-                <title id="title"></title>
-                <div id="date"></div>
-                <img src="" id="picture" class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg">
-                <section id="moon-phase-text"></section>
+                <div class="flex-col md:max-w-lg rounded-lg text-sm bg-white shadow-lg astronomy bottom-0 right-0">
+                <title class="astronomy" id="title"></title>
+                <div class="astronomy" id="date"></div>
+                <img src="" id="picture" class=" w-full h-100 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg">
+                <section class="astronomy break-normal" id="moon-phase-text"></section>
                 </div>
             </div>
 
