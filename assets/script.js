@@ -39,6 +39,8 @@ function DisplayFunFact(event){
     event.preventDefault();
     var FactContainer = document.querySelector("#fact-container");
     FactContainer.classList.remove("hide");
+    funFact.classList.add("hide");
+
 
 }
 
