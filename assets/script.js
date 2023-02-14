@@ -17,8 +17,19 @@ var pisces = document.getElementById("pisces");
 var titleFact = document.getElementById("fact-title");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
-// functions for horoscope navigation
 
+// functions for horoscope navigation
+function showYest() {
+    displayHoro("yesterday");
+}
+
+function showToday() {
+    displayHoro("today");
+}
+
+function showTom() {
+    displayHoro("tomorrow");
+}
 function DisplayFunFact(event){
     event.preventDefault();
     var FactContainer = document.querySelector('#fact-container');
@@ -116,7 +127,12 @@ function clickedPisces() {
     localStorage.setItem("Astrology Sign", "Pisces");
 
 }
-function displayHoro()  {
+function displayHoro(day)  {
+    const sign = localStorage.getItem("Astrology Sign");
+    if (!sign) {
+        console.log("No sign selected");
+        return;
+    }
     const options = {
         method: 'POST',
         headers: {
@@ -125,13 +141,18 @@ function displayHoro()  {
         }
     };
     
-    fetch('https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today', options)
+    fetch('https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=' + sign.toLowerCase() + '&day=' + day , options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => renderHoroscope(response))
         .catch(err => console.error(err));
 }
+function renderHoroscope(data) {
+    console.log(data);
+    document.getElementById("dh").textContent = (data.description);
+    
+}
 
-displayHoro();
+// displayHoro();
 
 // event listeners
 //yesterday.addEventListener("click", showYest);
@@ -151,7 +172,3 @@ sagittarius.addEventListener("click", clickedSagittarius);
 capricorn.addEventListener("click", clickedCapricorn);
 aquarius.addEventListener("click", clickedAquarius);
 pisces.addEventListener("click", clickedPisces);
-
-var storedSign = localStorage.getItem("Astrology Sign");
-
-console.log(storedSign);
