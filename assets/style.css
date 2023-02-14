@@ -206,6 +206,7 @@ body {
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar button {font-size: 18px;}
+  .astronomy {font-size: 6px;}
 }
 
 .buttons img {
