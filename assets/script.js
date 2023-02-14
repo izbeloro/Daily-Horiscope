@@ -51,9 +51,11 @@ const fetchNASAData = async () => {
   }
 
   function displayData (data) {
+    console.log(data);
     document.getElementById('title').textContent = data.title;
     document.getElementById('date').textContent = data.date;
     document.getElementById('moon-phase-text').textContent = data.explanation;
+    document.getElementById("picture") = data.url;
     
   }
   

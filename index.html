@@ -69,12 +69,14 @@
                 </div>
             </section>
             
-            <div class="absolute bottom-12 right-10 text-2xl mb-40">
+            <div class="text-2xl mb-40 flex justify-right absolute bottom-0 right-0 h-20 w-30">
                 <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Astronomy Fact of the Day</button>
+                <div class="flex flex-col md:flex-row md:max-w-lg rounded-lg bg-white shadow-lg">
                 <title id="title"></title>
                 <div id="date"></div>
-                <img src="" id="picture">
+                <img src="" id="picture" class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg">
                 <section id="moon-phase-text"></section>
+                </div>
             </div>
 
         </main>
