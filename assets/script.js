@@ -14,6 +14,7 @@ var sagittarius = document.getElementById("sagittarius");
 var capricorn = document.getElementById("capricorn");
 var aquarius = document.getElementById("aquarius");
 var pisces = document.getElementById("pisces");
+var titleFact = document.getElementById("fact-title");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
 
@@ -46,70 +47,83 @@ function showMoon() {
 
 function clickedAries() {
     document.getElementById("fun-fact-text").innerText = "Aries are the most active zodiac sign. They're always working, investing in a hobby, exercising, or meeting new people.";   
+    titleFact.innerText = "Aries";
     localStorage.setItem("Astrology Sign", "Aries");
+
 }
 
 function clickedTaurus() {
     document.getElementById("fun-fact-text").innerText = "Taurus people are very sensitive, devoted, affectionate, loyal, honest, and trustworthy when they fall in love.";   
+    titleFact.innerText = "Taurus";
     localStorage.setItem("Astrology Sign", "Taurus");
 }
 
 function clickedGemini() {
     document.getElementById("fun-fact-text").innerText = "Extroverted and fun-loving personalities are characteristics of Geminis. They enjoy being around others and are always up for a good time.";   
+    titleFact.innerText = "Gemini";
     localStorage.setItem("Astrology Sign", "Gemini");
 
 }
 
 function clickedCancer() {
     document.getElementById("fun-fact-text").innerText = "You can be a bit moody at times, but overall, you are a loving and caring partner who just wants to make things work.";   
+    titleFact.innerText = "Cancer";
     localStorage.setItem("Astrology Sign", "Cancer");
 
 }
 
 function clickedLeo() {
     document.getElementById("fun-fact-text").innerText = "Former President of the United States, Barack Obama, is a Leo, as are actors Arnold Schwarzenegger and Daniel Radcliffe.";   
+    titleFact.innerText = "Leo";
     localStorage.setItem("Astrology Sign", "Leo");
 
 }
 
 function clickedVirgo() {
     document.getElementById("fun-fact-text").innerText = "Virgos are also known for their patience. While there are limits to patience, this Earth sign is more patient than others.";   
+    titleFact.innerText = "Virgo";
     localStorage.setItem("Astrology Sign", "Virgo");
 
 }
 
 function clickedLibra() {
     document.getElementById("fun-fact-text").innerText = "Libras are very self-critical and always want to give 110% of themselves.";   
+    titleFact.innerText = "Libra";
     localStorage.setItem("Astrology Sign", "Libra");
 
 }
 
 function clickedScorpio() {
     document.getElementById("fun-fact-text").innerText = "Stargazing, playing games, crystal gazing, music, gathering gems, yoga, and meditation are some of the interests for Scorpios to consider.";   
+    titleFact.innerText = "Scorpio";
     localStorage.setItem("Astrology Sign", "Scorpio");
 
 }
 
 function clickedSagittarius() {
     document.getElementById("fun-fact-text").innerText = "Sagittarians will talk your ears off one day, and be calm and quiet the next. There’s no in-between.";   
+    titleFact.innerText = "Sagittarius";
     localStorage.setItem("Astrology Sign", "Sagittarius");
 
 }
 
 function clickedCapricorn() {
     document.getElementById("fun-fact-text").innerText = "Alright, we know about the dependable nature of the Capricorn, but did you know they’re also one of the funniest zodiac signs?";   
+    titleFact.innerText = "Capricorn";
     localStorage.setItem("Astrology Sign", "Capricorn");
 
 }
 
 function clickedAquarius() {
     document.getElementById("fun-fact-text").innerText = "The greatest inventor and forward thinker of all time, Thomas Edison, was an Aquarius, born February 11, 1847.";   
+    titleFact.innerText = "Aquarius";
     localStorage.setItem("Astrology Sign", "Aquarius");
 
 }
 
 function clickedPisces() {
     document.getElementById("fun-fact-text").innerText = "Pisces are the least materialistic sign in the zodiac.";   
+    titleFact.innerText = "Pisces";
     localStorage.setItem("Astrology Sign", "Pisces");
 
 }
@@ -141,9 +155,9 @@ function renderHoroscope(data) {
 // displayHoro();
 
 // event listeners
-yesterday.addEventListener("click", showYest);
-today.addEventListener("click", showToday);
-tomorrow.addEventListener("click", showTom);
+//yesterday.addEventListener("click", showYest);
+//today.addEventListener("click", showToday);
+//tomorrow.addEventListener("click", showTom);
 funFact.addEventListener("click", DisplayFunFact);
 aries.addEventListener("click", clickedAries);
 taurus.addEventListener("click", clickedTaurus);
