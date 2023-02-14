@@ -206,8 +206,7 @@ document.getElementById('fun-fact').addEventListener("click", function(){
 function DisplayFunFact(event) {
   event.preventDefault();
   var FactContainer = document.querySelector("Hide-container-fact");
-
-  FactContainer.style.display = "visible";
+FactContainer.style.display = "visible";
 
   //else {
   // FactContainer.style.visibility = 'hidden';
