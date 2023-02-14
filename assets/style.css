@@ -13,8 +13,15 @@ body {
   overflow: hidden;
 }
 
-.Hide-container-fact {
+.hide {
   visibility: hidden;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .space {

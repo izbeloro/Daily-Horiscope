@@ -53,11 +53,20 @@
                 </div>
             </section>
 
-            <section id="fun-fact" class="hide">
-                <h2>Fun Fact!</h2>
-                <button id="btn">
-                    Reveal the fact!
-                </button>
+            <section id="fun-fact">
+                <button type="button" id="fact" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Reveal the fact!</button>
+                
+                <div class="flex justify-left h-45 hide" id="fact-container">
+                        <div class="flex flex-col md:flex-row md:max-w-lg	rounded-lg bg-white shadow-lg">
+                        <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg?w=400&h=300&c=crop" alt="" />
+                        <div class="p-6 flex flex-col justify-start"> 
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">Fun Fact!</h5>
+                            <p class="text-gray-700 text-base mb-4" id = "fun-fact-text">
+                                Click a sign on the left to view your fun fact!
+                            </p>
+                        </div>
+                        </div>
+                </div>
             </section>
             
             <div class="absolute bottom-12 right-10 text-2xl mb-40">
@@ -72,83 +81,83 @@
         <aside id="signs">
             <!-- In this section, individual classes were deleted and condensed into benefits h3 in the CSS -->
             <section class="sidebar">
-                <h3 class="text-lg pb-10 text-center mr-3 mr-3">CHOOSE YOUR SIGN!</h3>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="aries" id="aries" type="submit">
-                    <img src="./assets/aries.png" alt="buttonpng" /> ARIES
+                <h3 class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 ml-2 mb-2">CHOOSE YOUR SIGN!</h3>
+                <button class="center buttons" id="aries" type="submit">
+                    <img src="./assets/aries.png" alt="buttonpng"/> ARIES
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-1 mb-2 mt-2 ml-0.5 underline">
                     MAR 21 - APR 19
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2"  id="taurus" id="taurus" type="submit">
+                <button class="center buttons" id="taurus" type="submit">
                     <img src="./assets/taurus.png" alt="buttonpng" /> TAURUS
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     APR 20 - MAY 20
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="gemini" id="gemini" type="submit">
+                <button class="center buttons" id="gemini" type="submit">
                     <img src="./assets/gemini.png" alt="buttonpng" /> GEMINI
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     MAY 21 - JUN 20
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="cancer" id="cancer" type="submit">
+                <button class="center buttons" id="cancer" type="submit">
                     <img src="./assets/cancer.png" alt="buttonpng" /> CANCER
                 </button>
-                <p class="underline"> JUN 21 - JUL 22
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
+                    JUN 21 - JUL 22
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="leo" id="leo" type="submit">
+                <button class="center buttons" id="leo" type="submit">
                     <img src="./assets/leo.png" alt="buttonpng" /> LEO
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     JUL 23 - AUG 22
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="virgo" id="virgo" type="submit">
-                    <img src="./assets/./assets/virgo.png" alt="buttonpng" /> VIRGO
+                <button class="center buttons" id="virgo" type="submit">
+                    <img src="./assets/virgo.png" alt="buttonpng" /> VIRGO
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     AUG 23 - SEP 22
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="libra" id="libra" type="submit">
+                <button class="center buttons" id="libra" type="submit">
                     <img src="./assets/libra.png" alt="buttonpng" /> LIBRA
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     SEP 23 - OCT 22
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="scorpio" id="scorpio" type="submit">
+                <button class="center buttons" id="scorpio" type="submit">
                     <img src="./assets/scorpio.png" alt="buttonpng" /> SCORPIO
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     OCT 23 - NOV 21
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="sagittarius" id="sagittarius" type="submit">
+                <button class="center buttons" id="sagittarius" type="submit">
                     <img src="./assets/sagittarius.png" alt="buttonpng" /> SAGITTARIUS
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     NOV 22 - DEC 21
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2"  id="capricorn" id="capricorn" type="submit">
+                <button class="center buttons" id="capricorn" type="submit">
                     <img src="./assets/capricorn.png" alt="buttonpng" /> CAPRICORN
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     DEC 22 - JAN 19
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="aquarius" id="aquarius" type="submit">
+                <button class="center buttons" id="aquarius" type="submit">
                     <img src="./assets/aquarius.png" alt="buttonpng" /> AQUARIUS
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     JAN 20 - FEB 18
                 </p>
-                <button class="buttons text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2" id="pisces" id="pisces" type="submit">
+                <button class="center buttons" id="pisces" type="submit">
                     <img src="./assets/pisces.png" alt="buttonpng" /> PISCES
                 </button>
-                <p class="underline">
+                <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     FEB 19 - MAR 20
                 </p>
         </aside>
         <div class="space stars1"></div>
         <div class="space stars2"></div>
         <div class="space stars3"></div>
-     
     <script src="./assets/script.js"></script>
 
 
