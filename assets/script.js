@@ -19,7 +19,6 @@ var titleFact = document.getElementById("fact-title");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today";
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19";
 var moonBtn = document.getElementById("moon-phase");
-var moonApiKey = "17IbzM8GxbtOwHnj13QFyZGYzqwfcprwC1pZjXBV";
 
 
 // functions for horoscope navigation
@@ -31,9 +30,11 @@ function showToday() {
     displayHoro("today");
 }
 
+
 function showTom() {
     displayHoro("tomorrow");
 }
+
 function DisplayFunFact(event){
     event.preventDefault();
     var FactContainer = document.querySelector("#fact-container");
@@ -183,6 +184,7 @@ function renderHoroscope(data) {
 // displayHoro();
 
 // event listeners
+
 yesterday.addEventListener("click", showYest);
 today.addEventListener("click", showToday);
 tomorrow.addEventListener("click", showTom);
@@ -201,14 +203,3 @@ aquarius.addEventListener("click", clickedAquarius);
 pisces.addEventListener("click", clickedPisces);
 moonBtn.addEventListener("click", fetchNASAData);
 
-
-
-
-
-
-
-
-
-var storedSign = localStorage.getItem("Astrology Sign");
-
-console.log(storedSign);
