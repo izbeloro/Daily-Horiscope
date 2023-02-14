@@ -16,6 +16,8 @@ var aquarius = document.getElementById("aquarius");
 var pisces = document.getElementById("pisces");
 var horoApi = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today"
 var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19"
+var horoscope = document.getElementById("dh");
+
 // functions for horoscope navigation
 function showYest() {
     
@@ -34,10 +36,6 @@ function DisplayFunFact(event){
 
     FactContainer.style.visibility = 'visible';
 }
-// function for fun fact
-//function showFact() {
-    //funFact.classList.add("hide");
-//}
 
 // function for moon phase
 function showMoon() {
@@ -55,8 +53,13 @@ function displayHoro()  {
     
     fetch('https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today', options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => renderHoroscope(response))
         .catch(err => console.error(err));
+}
+
+function renderHoroscope(data) {
+    document.getElementById("dh").textContent = (data.description);
+    console.log(data);
 }
 
 displayHoro();
