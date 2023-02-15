@@ -2,7 +2,7 @@
 
 ## Description
 
-This webpage was created to display the user's daily horoscope (yesterday's, today's, and tomorrow's), the moon phase and a fun fact. The user clicks on their according astrology sign, then the application then displays correlating data for the users sign. There are 2 buttons that ask the user if they are interested in learning a fun fact or seeing tonights moon phase. Once the buttons are clicked, it reveals the corresponding information. This webpage displayed the acquired skills learned throughout the course displaying knowledge on HTML, CSS, CSS framework, and JavaScript. 
+This webpage was created to display the user's daily horoscope (yesterday's, today's, and tomorrow's), the moon phase and a fun fact. The user clicks on their according astrology sign, then the application then displays correlating data for the users sign. There are 2 buttons that ask the user if they are interested in learning a fun fact or seeing tonights moon phase. Once the buttons are clicked, it reveals the corresponding information. We also have a navigation bar with anchor tags which help the user navigate throughout the page. This webpage displayed the acquired skills learned throughout the course displaying knowledge on HTML, CSS, CSS framework, and JavaScript. 
 
 ## Tasks
 - Display data pulled from 2 server side API's correctly.
@@ -23,8 +23,8 @@ To use this challenge weboage, click on the corresponding astrological sign. Nav
 
 - https://tailwindui.com/documentation
 - https://www.makeareadme.com/#license-1
-- 
-- 
+- https://www.hindustantimes.com/astrology/horoscope/zodiac-and-their-fun-facts-things-you-didn-t-know-about-these-3-zodiacs-101662638397760.html
+- https://www.capetownetc.com/astrology/astro-facts-astrology-101/
 
 ## License
 
