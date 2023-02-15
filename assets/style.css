@@ -166,8 +166,6 @@ body {
   }
 }
 
-
-
 .sidebar {
   height: 100%;
   width: 160px;
@@ -220,9 +218,6 @@ body {
 section button {
     align-self: center;
 }
-
-
-
 
 .days .btn {
   background-color: rgba(38, 11, 63, 0.685);
