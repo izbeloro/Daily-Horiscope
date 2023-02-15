@@ -13,7 +13,12 @@ This webpage was created to display the user's daily horoscope (yesterday's, tod
 
 ## Usage
 
-![ScreenShot](./)
+Link to Deployed Application: https://izbeloro.github.io/Daily-Horoscope/
+
+![DH Demo1](https://user-images.githubusercontent.com/120453099/218906549-643b2d76-4613-4328-bb2a-0f917bb50a4a.png)
+
+![DH Demo2](https://user-images.githubusercontent.com/120453099/218906565-a1056bd4-8cc8-4b67-8f8d-b666f8da8f66.png)
+
 
 To use this challenge weboage, click on the corresponding astrological sign. Navagiate to the day the horoscope the user is seeking. If interested, click on the reveal buttons to reveal a fun fact or the astronomy fact of the day along with an image. The funfact reveals an interesting fact for the sign of the user.
 
@@ -22,8 +27,9 @@ To use this challenge weboage, click on the corresponding astrological sign. Nav
 
 - https://tailwindui.com/documentation
 - https://www.makeareadme.com/#license-1
-- 
-- 
+- https://www.hindustantimes.com/astrology/horoscope/zodiac-and-their-fun-facts-things-you-didn-t-know-about-these-3-zodiacs-101662638397760.html
+- https://www.capetownetc.com/astrology/astro-facts-astrology-101/
+-https://www.funfactsabout.com/facts-about-the-zodiac/
 
 ## License
 
