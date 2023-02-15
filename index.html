@@ -11,10 +11,10 @@
 </head>
 
 <body>
-
+        <header>
             <nav class="flex flex-wrap justify-between items-center">
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-                    <span class="self-center ml-5 font-semibold whitespace-nowrap text-4xl">Your Daily Dose
+                    <span class="self-center ml-5 font-semibold whitespace-nowrap text-4xl DailyDose">Your Daily Dose
                         of Horoscope</span>
                 </div>
             </nav>
@@ -23,31 +23,28 @@
                     <div class="flex items-center">
                         <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                             <li>
-                                <a href="#" class="hover:underline"
+                                <a href="#daily-horo" class="hover:underline"
                                     aria-current="page">Daily Horoscope</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">Tonights Moon
-                                    Phase</a>
+                                <a href="#moon-phase" class="hover:underline">Astronomy Fact of the Day</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">See a Fun Fact!</a>
+                                <a href="#fact" class="hover:underline">See a Fun Fact!</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </nav>
         </header>
         <main class="main">
-
-            <section class="p-10 mb-52 text-2xl text-center mr-20" id="daily-horo">
-                <div class="days">
-                <button type="submit" id="yest" class="btn px-5 self-center">Yesterday</button>
-                <button type="submit" id="today" class="btn px-5 self-center">Today</button>
-                <button type="submit" id="tom" class="btn px-5 self-center">Tomorrow</button>
+            <section class="p-10 mb-10 text-2xl text-center mr-20" id="daily-horo">
+                <div class="days mt-4">
+                    <button type="submit" id="yest" class="btn px-5 self-center">Yesterday</button>
+                    <button type="submit" id="today" class="btn px-5 self-center">Today</button>
+                    <button type="submit" id="tom" class="btn px-5 self-center">Tomorrow</button>
                 </div>
-                <h2>Daily Horoscope:</h2>
+                <h2 class="mt-5 text-3xl" id="changeSign">Your Daily Horoscope!</h2>
 
                 <div class="daily-zodiac">
                
@@ -56,12 +53,13 @@
                 </div>
             </section>
 
-            <section id="fun-fact">
-                <button type="button" id="fact" class=" text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Reveal the fact!</button>
-                
-                <div class="flex justify-left h-45 hide" id="fact-container">
+            <div class="grid grid-rows-2 grid-flow-col gap-2">
+                <div id="fun-fact">
+                    <button type="button" id="fact" class=" text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Reveal Fun fact!</button>
+                    
+                    <div class="flex justify-left h-45 hide" id="fact-container">
                         <div class="flex flex-col md:flex-row md:max-w-lg	rounded-lg shadow-lg small-containers">
-                        <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg?w=400&h=300&c=crop" alt="" />
+                        <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg?w=400&h=300&c=crop" alt="Full Zodiac chart" />
                         <div class="p-6 flex flex-col justify-start"> 
                         <h5 class="text-gray-900 text-xl font-medium mb-2 text-center" id="fact-title">Fun Fact!</h5>
                             <p class="text-gray-700 text-base mb-4 text-center" id = "fun-fact-text">
@@ -69,92 +67,95 @@
                             </p>
                         </div>
                         </div>
+                    </div>
                 </div>
-            </section>
-            
-            <div class="mb-40 justify-right p-9 relative">
-                <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 ">Astronomy Fact of the Day</button>
-                <div class="flex-col md:max-w-lg rounded-lg text-sm bg-white shadow-lg astronomy bottom-0 right-0">
-                <title class="astronomy" id="title"></title>
-                <div class="astronomy" id="date"></div>
-                <img src="" id="picture" class=" w-full h-100 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg">
-                <section class="astronomy break-normal" id="moon-phase-text"></section>
+                
+                <div class="flex flex-row justify-end items-start mt-4 mb-4 row-start-1">
+                
+                    <button type="button" id="moon-phase" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mb-2 ">Astronomy Fact of the Day</button>
+                    
+                    <div class="flex justify-end flex-col md:max-w-xl rounded-xl text-sm shadow-lg astronomy text-center mx-30 small-containers hide" id="showAstronomy">
+                        <title class="astronomy" id="title"></title>
+                        <div class="astronomy text-4xl py-3" id="date"></div>
+                        <img src="" id="picture" class=" w-80 h-60 md:h-auto object-cover md:w-54 rounded-t-lg md:rounded-none md:rounded-l-lg center">
+                        <div class="astronomy break-normal ml-4 mr-4 mt-4 mb-2" id="moon-phase-text"></div>
+                    </div>
                 </div>
             </div>
 
-      </main>
+        </main>
         <aside id="signs">
             <!-- In this section, individual classes were deleted and condensed into benefits h3 in the CSS -->
             <section class="sidebar">
                 <h3 class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 ml-2 mb-2">CHOOSE YOUR SIGN!</h3>
                 <button class="center buttons" id="aries" type="submit">
-                    <img src="./assets/aries.png" alt="buttonpng"/> ARIES
+                    <img src="./assets/aries.png" alt="Aries sign icon"/> ARIES
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-1 mb-2 mt-2 ml-0.5 underline">
                     MAR 21 - APR 19
                 </p>
                 <button class="center buttons" id="taurus" type="submit">
-                    <img src="./assets/taurus.png" alt="buttonpng" /> TAURUS
+                    <img src="./assets/taurus.png" alt="Taurus sign icon" /> TAURUS
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     APR 20 - MAY 20
                 </p>
                 <button class="center buttons" id="gemini" type="submit">
-                    <img src="./assets/gemini.png" alt="buttonpng" /> GEMINI
+                    <img src="./assets/gemini.png" alt="Gemini sign icon" /> GEMINI
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     MAY 21 - JUN 20
                 </p>
                 <button class="center buttons" id="cancer" type="submit">
-                    <img src="./assets/cancer.png" alt="buttonpng" /> CANCER
+                    <img src="./assets/cancer.png" alt="Cancer sign icon" /> CANCER
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     JUN 21 - JUL 22
                 </p>
                 <button class="center buttons" id="leo" type="submit">
-                    <img src="./assets/leo.png" alt="buttonpng" /> LEO
+                    <img src="./assets/leo.png" alt="Leo sign icon" /> LEO
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     JUL 23 - AUG 22
                 </p>
                 <button class="center buttons" id="virgo" type="submit">
-                    <img src="./assets/virgo.png" alt="buttonpng" /> VIRGO
+                    <img src="./assets/virgo.png" alt="Virgo sign icon" /> VIRGO
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     AUG 23 - SEP 22
                 </p>
                 <button class="center buttons" id="libra" type="submit">
-                    <img src="./assets/libra.png" alt="buttonpng" /> LIBRA
+                    <img src="./assets/libra.png" alt="Libra sign icon" /> LIBRA
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     SEP 23 - OCT 22
                 </p>
                 <button class="center buttons" id="scorpio" type="submit">
-                    <img src="./assets/scorpio.png" alt="buttonpng" /> SCORPIO
+                    <img src="./assets/scorpio.png" alt="Scorpio sign icon" /> SCORPIO
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     OCT 23 - NOV 21
                 </p>
                 <button class="center buttons" id="sagittarius" type="submit">
-                    <img src="./assets/sagittarius.png" alt="buttonpng" /> SAGITTARIUS
+                    <img src="./assets/sagittarius.png" alt="Sagittarius sign icon" /> SAGITTARIUS
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     NOV 22 - DEC 21
                 </p>
                 <button class="center buttons" id="capricorn" type="submit">
-                    <img src="./assets/capricorn.png" alt="buttonpng" /> CAPRICORN
+                    <img src="./assets/capricorn.png" alt="Capricorn sign icon" /> CAPRICORN
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     DEC 22 - JAN 19
                 </p>
                 <button class="center buttons" id="aquarius" type="submit">
-                    <img src="./assets/aquarius.png" alt="buttonpng" /> AQUARIUS
+                    <img src="./assets/aquarius.png" alt="Aquarius sign icon" /> AQUARIUS
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     JAN 20 - FEB 18
                 </p>
                 <button class="center buttons" id="pisces" type="submit">
-                    <img src="./assets/pisces.png" alt="buttonpng" /> PISCES
+                    <img src="./assets/pisces.png" alt="Pisces sign icon" /> PISCES
                 </button>
                 <p class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-0.5 mb-2 mt-2 ml-0.5 underline">
                     FEB 19 - MAR 20
@@ -163,9 +164,9 @@
         <div class="space stars1"></div>
         <div class="space stars2"></div>
         <div class="space stars3"></div>
+
     <script src="./assets/script.js"></script>
-
-
+    
 </body>
 
 </html>
