@@ -166,8 +166,6 @@ body {
   }
 }
 
-
-
 .sidebar {
   height: 100%;
   width: 160px;
@@ -206,6 +204,8 @@ body {
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar button {font-size: 18px;}
+  .astronomy {font-size: 6px;}
+  .nav span {font-size: 12px;}
 }
 
 .buttons img {
@@ -218,9 +218,6 @@ body {
 section button {
     align-self: center;
 }
-
-
-
 
 .days .btn {
   background-color: rgba(38, 11, 63, 0.685);

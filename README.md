@@ -1,8 +1,9 @@
-# Daily-Horiscope
+# Daily-Horoscope
 
 ## Description
 
-This webpage was created to display the user's daily horoscope (yesterday's, today's, and tomorrow's), the moon phase and a fun fact. The user clicks on their according astrology sign, then the application then displays correlating data for the users sign. There are 2 buttons that ask the user if they are interested in learning a fun fact or seeing tonights moon phase. Once the buttons are clicked, it reveals the corresponding information. We also have a navigation bar with anchor tags which help the user navigate throughout the page. This webpage displayed the acquired skills learned throughout the course displaying knowledge on HTML, CSS, CSS framework, and JavaScript. 
+This webpage was created to display the user's daily horoscope (yesterday's, today's, and tomorrow's), an astronomy fact and a fun fact. The user clicks on their according astrology sign, then the application then displays correlating data for the users sign. There are 2 buttons that ask the user if they are interested in learning a fun fact or the astronomy fact of the day. Once the buttons are clicked, it reveals the corresponding information. This webpage displayed the acquired skills learned throughout the course displaying knowledge on HTML, CSS, CSS Framework Tailwind, and JavaScript. 
+
 
 ## Tasks
 - Display data pulled from 2 server side API's correctly.
@@ -11,12 +12,11 @@ This webpage was created to display the user's daily horoscope (yesterday's, tod
 - Use CSS framework other than Bootstrap
 
 
-
 ## Usage
 
 ![ScreenShot](./)
 
-To use this challenge weboage, click on the corresponding astrological sign. Navagiate to the day the horoscope the user is seeking. If interested, click on the reveal buttons to reveal a fun fact or the moon  phase for the night. The funfact reveals a celebrity who shares the same astrological sign as the user.
+To use this challenge weboage, click on the corresponding astrological sign. Navagiate to the day the horoscope the user is seeking. If interested, click on the reveal buttons to reveal a fun fact or the astronomy fact of the day along with an image. The funfact reveals an interesting fact for the sign of the user.
 
 
 ## Credits
