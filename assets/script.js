@@ -1,3 +1,4 @@
+//Sets variables for each zodiac sign and buttons from html page
 var yesterday = document.getElementById("yest");
 var today = document.getElementById("today");
 var tomorrow = document.getElementById("tom");
@@ -21,7 +22,6 @@ var key =  "c18878066fmsha0045ab22824fb9p1bac68jsn789c63b07d19";
 var moonBtn = document.getElementById("moon-phase");
 var changeSign = document.getElementById("changeSign");
 
-
 // functions for horoscope navigation
 function showYest() {
     displayHoro("yesterday");
@@ -31,18 +31,16 @@ function showToday() {
     displayHoro("today");
 }
 
-
 function showTom() {
     displayHoro("tomorrow");
 }
 
+//Event triggered to display fun fact when fun fact button is pressed
 function DisplayFunFact(event){
     event.preventDefault();
     var FactContainer = document.querySelector("#fact-container");
     FactContainer.classList.remove("hide");
     funFact.classList.add("hide");
-
-
 }
 
 // function for moon phase
@@ -71,8 +69,7 @@ const fetchNASAData = async () => {
    showAstronomy.classList.remove("hide");
   }
   
-
-
+//Functions for each Zodiac sign adding text to fun fact container, and updating chosen sign to local storage
 function clickedAries() {
     document.getElementById("fun-fact-text").innerText = "Aries are the most active zodiac sign. They're always working, investing in a hobby, exercising, or meeting new people.";   
     titleFact.innerText = "Aries";
@@ -157,6 +154,8 @@ function clickedPisces() {
     localStorage.setItem("Astrology Sign", "Pisces");
     changeSign.innerText = "Pisces";
 }
+
+//Displays horoscope to page and gets sign from local storage
 function displayHoro(day)  {
     const sign = localStorage.getItem("Astrology Sign");
     if (!sign) {
@@ -179,13 +178,9 @@ function displayHoro(day)  {
 function renderHoroscope(data) {
     console.log(data);
     document.getElementById("dh").textContent = (data.description);
-    
 }
 
-// displayHoro();
-
-// event listeners
-
+// event listeners for zodiac signs, and horoscope yesterday/today/tommorow buttons
 yesterday.addEventListener("click", showYest);
 today.addEventListener("click", showToday);
 tomorrow.addEventListener("click", showTom);
@@ -203,4 +198,3 @@ capricorn.addEventListener("click", clickedCapricorn);
 aquarius.addEventListener("click", clickedAquarius);
 pisces.addEventListener("click", clickedPisces);
 moonBtn.addEventListener("click", fetchNASAData);
-
